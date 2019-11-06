@@ -1,0 +1,20 @@
+<kendo-grid
+        [data]="gridData"
+        [pageSize]="state.take"
+        [skip]="state.skip"
+        [sort]="state.sort"
+        [filter]="state.filter"
+        [sortable]="true"
+        [pageable]="true"
+        [filterable]="true"
+        (dataStateChange)="dataStateChange($event)">
+
+    <kendo-grid-column field="YourName" title="Name">
+    </kendo-grid-column>
+    <kendo-grid-column field="Email" title="Email">
+    </kendo-grid-column>
+    <kendo-grid-column field="Language" title="Language">
+    </kendo-grid-column>
+    <kendo-grid-column field="Version" title="Version">
+    </kendo-grid-column>
+    </kendo-grid>

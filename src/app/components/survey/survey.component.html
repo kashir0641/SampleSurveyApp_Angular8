@@ -1,0 +1,33 @@
+<div class="container">
+    <form  [formGroup]="employeeForm" (ngSubmit)="kindoform()">
+        <kendo-textbox-container floatingLabel="Your Name">
+          <input kendoTextBox
+          formControlName="YourName" />
+        </kendo-textbox-container>
+        <br/>
+        <kendo-textbox-container floatingLabel="Email">
+            <input kendoTextBox
+            formControlName="Email" />
+          </kendo-textbox-container>
+
+        <div class="example-wrapper">
+            <p>Language</p>
+            <kendo-combobox [data]="listItems"
+            formControlName="Language"
+            [allowCustom]="allowCustom">
+            </kendo-combobox>
+            </div>
+
+        <div class="example-wrapper">
+        <p>Version</p>
+        <kendo-combobox [data]="version"
+        formControlName="Version"
+        [allowCustom]="allowCustom">
+        </kendo-combobox>
+        </div>
+        <br />
+        <p class="k-block">
+            <button kendoButton [primary]="true">Submit</button>
+        </p>
+      </form>
+</div>
